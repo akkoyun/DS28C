@@ -1,8 +1,8 @@
 {
-	"name": "<Library_Name>",
+	"name": "DS28C",
 	"version": "1.0.0",
-	"keywords": "<Library_Keywords>",
-	"description": "<Library_Description>",
+	"keywords": "DS28C, Serial ID, Chip, Reading, Writing, Identification, Data, Storage, Integration, Embedded, Systems, Electronics, Firmware, Microcontroller, Interface, Unique, ID, Communication",
+	"description": "The DS28C Library provides a streamlined interface for reading and writing serial IDs to DS28C chips, simplifying the integration of unique identification data in various applications.",
 	"authors":
 	{
 		"name": "Mehmet Gunce Akkoyun",
@@ -11,7 +11,7 @@
 	},
 	"license": "MIT",
 	"frameworks": "arduino",
-	"headers": "<Library_Header_Name>.h",
+	"headers": "DS28C.h",
 	"platforms":
 	[
 		"atmelavr",
@@ -20,17 +20,21 @@
 	"repository":
 	{
 		"type": "git",
-		"url": "https://github.com/akkoyun/<Repo_Name>.git"
+		"url": "https://github.com/akkoyun/DS28C.git"
 	},
+	"dependencies": [
+		{
+			"owner": "akkoyun",
+			"name": "I2C_Functions"
+		}
+	],
 	"examples": [
 		{
-			"name": "<Sample_Name>",
-			"base": "examples/<Sample_Folder>",
+			"name": "Serial",
+			"base": "examples/Serial",
 			"files": [
-				"<Sample_Name>.ino"
+				"Serial.ino"
 			]
 		}
 	]
 }
-
-
