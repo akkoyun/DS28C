@@ -82,6 +82,9 @@
 			// Serial ID Read Function
 			void Get_Serial_ID(void) {
 				
+				// Begin I2C Communication
+				I2C_Functions::Begin();
+
 				// Set DS28C to I2C Mode
 				I2C_Functions::Write_Register(0x08, 0x01, false);
 
@@ -113,7 +116,6 @@
 				this->getSerialIDHex();
 
 			}
-
 
 	};
 
