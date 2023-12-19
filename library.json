@@ -1,6 +1,6 @@
 {
 	"name": "DS28C",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"keywords": "DS28C, Serial ID, Chip, Reading, Writing, Identification, Data, Storage, Integration, Embedded, Systems, Electronics, Firmware, Microcontroller, Interface, Unique, ID, Communication",
 	"description": "The DS28C Library provides a streamlined interface for reading and writing serial IDs to DS28C chips, simplifying the integration of unique identification data in various applications.",
 	"authors":

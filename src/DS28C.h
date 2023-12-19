@@ -79,41 +79,81 @@
 
 			}
 
-			// Serial ID Read Function
-			void Get_Serial_ID(void) {
-				
-				// Begin I2C Communication
+			// Begin Function
+			bool Begin(void) {
+
+				// Start I2C
 				I2C_Functions::Begin();
 
-				// Set DS28C to I2C Mode
-				I2C_Functions::Write_Register(0x08, 0x01, false);
+				// Control for Device
+				if (I2C_Functions::Variables.Device.Detect) {
 
-				// Send CRC  Read Request to DS28C and read
-				this->Serial_ID[0] = I2C_Functions::Read_Register(0x07);
+					// Set DS28C to I2C Mode
+					I2C_Functions::Write_Register(0x08, 0x01, false);
 
-				// Send 40-47 bit Read Request to DS28C and read
-				this->Serial_ID[1] = I2C_Functions::Read_Register(0x06);
+					// Send CRC  Read Request to DS28C and read
+					this->Serial_ID[0] = I2C_Functions::Read_Register(0x07);
 
-				// Send 32-39 bit Read Request to DS28C and read
-				this->Serial_ID[2] = I2C_Functions::Read_Register(0x05);
+					// Send 40-47 bit Read Request to DS28C and read
+					this->Serial_ID[1] = I2C_Functions::Read_Register(0x06);
 
-				// Send 24-31 bit Read Request to DS28C and read
-				this->Serial_ID[3] = I2C_Functions::Read_Register(0x04);
+					// Send 32-39 bit Read Request to DS28C and read
+					this->Serial_ID[2] = I2C_Functions::Read_Register(0x05);
 
-				// Send 16-23 bit Read Request to DS28C and read
-				this->Serial_ID[4] = I2C_Functions::Read_Register(0x03);
+					// Send 24-31 bit Read Request to DS28C and read
+					this->Serial_ID[3] = I2C_Functions::Read_Register(0x04);
 
-				// Send 08-15 bit Read Request to DS28C and read
-				this->Serial_ID[5] = I2C_Functions::Read_Register(0x02);
+					// Send 16-23 bit Read Request to DS28C and read
+					this->Serial_ID[4] = I2C_Functions::Read_Register(0x03);
 
-				// Send 00-07 bit Read Request to DS28C and read
-				this->Serial_ID[6] = I2C_Functions::Read_Register(0x01);
+					// Send 08-15 bit Read Request to DS28C and read
+					this->Serial_ID[5] = I2C_Functions::Read_Register(0x02);
 
-				// Send Device Family bit Read Request to DS28C and read
-				this->Serial_ID[7] = I2C_Functions::Read_Register(0x00);
+					// Send 00-07 bit Read Request to DS28C and read
+					this->Serial_ID[6] = I2C_Functions::Read_Register(0x01);
 
-				// Combine Serial ID
-				this->getSerialIDHex();
+					// Send Device Family bit Read Request to DS28C and read
+					this->Serial_ID[7] = I2C_Functions::Read_Register(0x00);
+
+					// Combine Serial ID
+					this->getSerialIDHex();
+					
+					// End Function
+					return(true);
+
+				} else {
+
+					// Send CRC  Read Request to DS28C and read
+					this->Serial_ID[0] = 0x00;
+
+					// Send 40-47 bit Read Request to DS28C and read
+					this->Serial_ID[1] = 0x00;
+
+					// Send 32-39 bit Read Request to DS28C and read
+					this->Serial_ID[2] = 0x00;;
+
+					// Send 24-31 bit Read Request to DS28C and read
+					this->Serial_ID[3] = 0x00;;
+
+					// Send 16-23 bit Read Request to DS28C and read
+					this->Serial_ID[4] = 0x00;;
+
+					// Send 08-15 bit Read Request to DS28C and read
+					this->Serial_ID[5] = 0x00;;
+
+					// Send 00-07 bit Read Request to DS28C and read
+					this->Serial_ID[6] = 0x00;;
+
+					// Send Device Family bit Read Request to DS28C and read
+					this->Serial_ID[7] = 0x00;;
+
+					// Combine Serial ID
+					this->getSerialIDHex();
+
+					// End Function
+					return(false);
+
+				}
 
 			}
 
