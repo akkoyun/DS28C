@@ -10,8 +10,8 @@ void setup() {
 	// Serial Communication Start
 	Serial.begin(115200);
 
-	// Get Serial ID
-	DS28C_Object.Get_Serial_ID();
+	// Start DS28C Object
+	DS28C_Object.Begin();
 
 	// Header
 	Serial.println(F("DS28C Serial ID Chip."));
@@ -22,14 +22,14 @@ void setup() {
 	Serial.print(F("Serial ID : "));
 	Serial.println(String(DS28C_Object.SerialID));
 	Serial.println(F("---------------------------------------"));
-	Serial.print("["); Serial.print(DS28C_Object.Serial_ID[0], HEX); Serial.print("]-");
-	Serial.print("["); Serial.print(DS28C_Object.Serial_ID[1], HEX); Serial.print("]-");
-	Serial.print("["); Serial.print(DS28C_Object.Serial_ID[2], HEX); Serial.print("]-");
-	Serial.print("["); Serial.print(DS28C_Object.Serial_ID[3], HEX); Serial.print("]-");
-	Serial.print("["); Serial.print(DS28C_Object.Serial_ID[4], HEX); Serial.print("]-");
-	Serial.print("["); Serial.print(DS28C_Object.Serial_ID[5], HEX); Serial.print("]-");
-	Serial.print("["); Serial.print(DS28C_Object.Serial_ID[6], HEX); Serial.print("]-");
-	Serial.print("["); Serial.print(DS28C_Object.Serial_ID[7], HEX); Serial.println("]");
+	Serial.print(F("[")); Serial.print(DS28C_Object.Serial_ID[0], HEX); Serial.print(F("]-"));
+	Serial.print(F("[")); Serial.print(DS28C_Object.Serial_ID[1], HEX); Serial.print(F("]-"));
+	Serial.print(F("[")); Serial.print(DS28C_Object.Serial_ID[2], HEX); Serial.print(F("]-"));
+	Serial.print(F("[")); Serial.print(DS28C_Object.Serial_ID[3], HEX); Serial.print(F("]-"));
+	Serial.print(F("[")); Serial.print(DS28C_Object.Serial_ID[4], HEX); Serial.print(F("]-"));
+	Serial.print(F("[")); Serial.print(DS28C_Object.Serial_ID[5], HEX); Serial.print(F("]-"));
+	Serial.print(F("[")); Serial.print(DS28C_Object.Serial_ID[6], HEX); Serial.print(F("]-"));
+	Serial.print(F("[")); Serial.print(DS28C_Object.Serial_ID[7], HEX); Serial.println(F("]"));
 	Serial.println(F("---------------------------------------"));
 
 }

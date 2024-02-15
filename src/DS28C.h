@@ -11,7 +11,7 @@
 #define __DS28C__
 
 	// Define Arduino Library
-	#ifndef __Arduino__
+	#ifndef Arduino_h
 		#include <Arduino.h>
 	#endif
 
@@ -65,7 +65,7 @@
 			char SerialID[17];
 
 			// Construct a new DS28C object
-			DS28C(const bool _Multiplexer_Enable = false, const uint8_t _Multiplexer_Channel = 0) : I2C_Functions(__I2C_Addr_DS28C__, _Multiplexer_Enable, _Multiplexer_Channel) {
+			explicit DS28C(const bool _Multiplexer_Enable = false, const uint8_t _Multiplexer_Channel = 0) : I2C_Functions(__I2C_Addr_DS28C__, _Multiplexer_Enable, _Multiplexer_Channel) {
 
 				// Set Multiplexer Variables
 				this->Sensor.Multiplexer.Enable = _Multiplexer_Enable;
