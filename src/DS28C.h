@@ -86,7 +86,7 @@
 				I2C_Functions::Begin();
 
 				// Control for Device
-				if (I2C_Functions::Variables.Device.Detect) {
+				if (I2C_Functions::Detect()) {
 
 					// Set DS28C to I2C Mode
 					I2C_Functions::Write_Register(0x08, 0x01, false);
