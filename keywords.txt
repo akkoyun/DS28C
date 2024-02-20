@@ -5,10 +5,14 @@
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
+DS28C                       KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
+Serial_ID                   KEYWORD2
+SerialID                    KEYWORD2
+Begin                       KEYWORD2
 
 #######################################
 # Constants (LITERAL1)

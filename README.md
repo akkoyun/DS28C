@@ -1,4 +1,4 @@
-# DS28C Library <sup>V1.1</sup>
+# DS28C Library <sup>V1.2</sup>
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/akkoyun/DS28C) ![arduino-library-badge](https://www.ardu-badge.com/badge/DS28C.svg?) ![Visits Badge](https://badges.pufler.dev/visits/akkoyun/DS28C) ![GitHub stars](https://img.shields.io/github/stars/akkoyun/DS28C?style=flat&logo=github) ![Updated Badge](https://badges.pufler.dev/updated/akkoyun/DS28C) ![PlatformIO Registry](https://badges.registry.platformio.org/packages/akkoyun/library/DS28C.svg) 
 [![Check Arduino](https://github.com/akkoyun/DS28C/actions/workflows/check-arduino.yml/badge.svg)](https://github.com/akkoyun/DS28C/actions/workflows/check-arduino.yml) [![Compile Examples](https://github.com/akkoyun/DS28C/actions/workflows/compile-examples.yml/badge.svg)](https://github.com/akkoyun/DS28C/actions/workflows/compile-examples.yml) [![Spell Check](https://github.com/akkoyun/DS28C/actions/workflows/spell-check.yml/badge.svg)](https://github.com/akkoyun/DS28C/actions/workflows/spell-check.yml)
